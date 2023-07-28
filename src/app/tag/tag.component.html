@@ -1,0 +1,15 @@
+<!-- <div *ngIf="tags">
+<a *ngFor="let tag from tags" [routerLink]="['/tag',tag.name.toLowerCase()]">{{tag.name}}{{tag.count}}</a>
+
+</div> -->
+
+<div *ngIf="tags"[style.justifyContent]="justifyContent">
+  <a *ngFor="let singletag of tags" routerLink="/tag/{{singletag.name}}"
+    >{{ singletag.name }} [{{ singletag.count }}]</a
+  >
+</div>
+
+<div *ngIf="foodPagetags"[style.justifyContent]="justifyContent">
+  <a *ngFor="let tagname of foodPagetags" routerLink="/tag/{{tagname}}">{{tagname}}"</a>
+   
+</div>
